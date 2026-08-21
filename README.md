@@ -112,21 +112,22 @@ Interactive dashboard visualizing the full 2014–2025 dataset.
 
 ```
 LA-Wildfire-Prediction/
-├── la_wildfire_ten_year_prediction.ipynb   # Full pipeline notebook (Phases 1–4)
-├── app.py                                  # Streamlit dashboard (Phase 5)
-├── requirements.txt                        # Dependencies
-├── logistic_regression.pkl                 # Saved model
-├── los_angeles_weather_10yrs.csv           # Raw weather data
-├── los_angeles_weather_10yrs_cleaned.csv   # Cleaned weather data
-├── latimes_fire_articles.csv               # Raw scraped articles
-├── latimes_fire_articles_cleaned.csv       # Filtered articles
-├── latimes_fire_articles_sentiment.csv     # Sentiment scores
-├── latimes_fire_articles_emotions.csv      # Raw emotion classifications
+├── la_wildfire_ten_year_prediction.ipynb        # Full pipeline notebook (Phases 1–4)
+├── app.py                                       # Streamlit dashboard (Phase 5)
+├── requirements.txt                             # Dependencies
+├── logistic_regression.pkl                      # Saved model
+├── screenshot_dashboard.png                     # Dashboard preview
+├── los_angeles_weather_10yrs.csv                # Raw weather data
+├── los_angeles_weather_10yrs_cleaned.csv        # Cleaned weather data
+├── latimes_fire_articles.csv                    # Raw scraped articles
+├── latimes_fire_articles_cleaned.csv            # Filtered articles
+├── latimes_fire_articles_sentiment.csv          # Sentiment scores
+├── latimes_fire_articles_emotions.csv           # Raw emotion classifications
 ├── latimes_fire_articles_emotions_adjusted.csv  # Adjusted emotion labels
-├── latimes_fire_summary_importance.csv     # Article importance scores
-├── weather_with_fire_labels.csv            # Weather + fire occurrence labels
-├── weather_with_sentiment_emotion.csv      # Weather + sentiment merged
-├── weather_enriched_with_emotion.csv       # Final model-ready dataset
+├── latimes_fire_summary_importance.csv          # Article importance scores
+├── weather_with_fire_labels.csv                 # Weather + fire occurrence labels
+├── weather_with_sentiment_emotion.csv           # Weather + sentiment merged
+├── weather_enriched_with_emotion.csv            # Final model-ready dataset
 └── README.md
 ```
 
