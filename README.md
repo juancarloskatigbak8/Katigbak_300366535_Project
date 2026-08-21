@@ -16,7 +16,7 @@ The pipeline pulls 10 years of daily weather observations from the Meteostat API
 
 ![Weather and Emotion Timeline](screenshot_dashboard.png)
 
-*Weather + Emotion + Fire Timeline (2014–2025) — temperature trends overlaid with emotion scores and fire event markers*
+*Weather + Emotion + Fire Timeline (2014–2025): temperature trends overlaid with emotion scores and fire event markers*
 
 ---
 
