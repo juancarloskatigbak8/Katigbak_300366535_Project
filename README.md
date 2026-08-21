@@ -1,12 +1,12 @@
 # LA Wildfire Prediction
 
-Wildfire risk prediction for Los Angeles using 10 years of daily weather data and sentiment analysis of Los Angeles Times articles. A 5-phase pipeline combining time series weather data, web scraping, NLP, and machine learning — visualized through an interactive Streamlit dashboard.
+Wildfire risk prediction for Los Angeles using 10 years of daily weather data and sentiment analysis of Los Angeles Times articles. A 5-phase pipeline combining time series weather data, web scraping, NLP, and machine learning: visualized through an interactive Streamlit dashboard.
 
 ---
 
 ## What This Project Does
 
-Most wildfire prediction models rely on weather data alone. This project tests whether public media sentiment — specifically, the emotional tone of LA Times wildfire coverage — carries additional signal for predicting fire risk.
+Most wildfire prediction models rely on weather data alone. This project tests whether public media sentiment: specifically, the emotional tone of LA Times wildfire coverage, carries additional signal for predicting fire risk.
 
 The pipeline pulls 10 years of daily weather observations from the Meteostat API, scrapes a decade of LA Times wildfire articles using an authenticated session, runs sentiment and emotion classification through HuggingFace Transformers, and trains three classifiers on the combined dataset. Results are visualized in an interactive Streamlit dashboard overlaying temperature trends, emotion scores, and historical fire events on a single timeline.
 
@@ -91,7 +91,7 @@ Weather features and emotion scores merged into a single daily dataset. Fire occ
 
 **Chosen model: Logistic Regression**
 
-Random Forest and XGBoost achieved high overall accuracy by predicting zero fires across the test set — a consequence of severe class imbalance. Logistic Regression was the only model that detected any fire events in the test set, making it the only model with practical utility for the prediction task. Its ROC AUC of 0.96 also indicates strong discriminative ability despite modest accuracy. The saved model (`logistic_regression.pkl`) powers the dashboard predictions.
+Random Forest and XGBoost achieved high overall accuracy by predicting zero fires across the test set: a consequence of severe class imbalance. Logistic Regression was the only model that detected any fire events in the test set, making it the only model with practical utility for the prediction task. Its ROC AUC of 0.96 also indicates strong discriminative ability despite modest accuracy. The saved model (`logistic_regression.pkl`) powers the dashboard predictions.
 
 ---
 
@@ -103,7 +103,7 @@ Interactive dashboard visualizing the full 2014–2025 dataset.
 - Fire occurrence distribution (pie chart)
 - Average temperature on fire vs. non-fire days (box plot)
 - Emotion distribution across all articles
-- Weather + Emotion + Fire Timeline — 10-year Plotly chart overlaying temperature trends, 30-day rolling average, emotion scores, and fire event markers
+- Weather + Emotion + Fire Timeline: 10-year Plotly chart overlaying temperature trends, 30-day rolling average, emotion scores, and fire event markers
 - Dominant emotion trend (30-day rolling average)
 
 ---
@@ -147,10 +147,10 @@ LA-Wildfire-Prediction/
 **What worked:** Logistic Regression with SMOTE was the only model to detect fire events in the test set, suggesting the combined weather and emotion feature set carries some predictive signal. The ROC AUC of 0.96 indicates the model can meaningfully distinguish fire-risk days from non-fire days at the ranking level.
 
 **Honest limitations:**
-- 14 fire events in ~4,000 days is a very small positive class — results should be interpreted with caution
+- 14 fire events in ~4,000 days is a very small positive class: results should be interpreted with caution
 - LA Times articles are not published daily, leaving gaps in the emotion signal
 - Fire risk depends on additional variables not captured here (vegetation dryness, land use, wind patterns beyond daily averages)
-- The scraper required an authenticated LA Times subscriber session — article collection is not fully reproducible without a subscription
+- The scraper required an authenticated LA Times subscriber session: article collection is not fully reproducible without a subscription
 
 **Future directions:** Adding satellite vegetation index data (NDVI) or Cal Fire incident data as additional features could improve recall on actual fire events.
 
